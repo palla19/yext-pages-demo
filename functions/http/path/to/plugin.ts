@@ -1,8 +1,8 @@
 // served at /path/to/plugin
 
-export default foo = () => {
+export default () => {
     return {
-        Headers: [],
+        headers: {},
         body: "",
         statusCode: 200
     };
