@@ -3,7 +3,7 @@
 export default () => {
     return {
         headers: {},
-        body: "",
+        body: "Plugin Invoked Successfully",
         statusCode: 200
     };
 };
