@@ -40,6 +40,7 @@ export const config: TemplateConfig = {
     localization: {
       locales: ["en"],
     },
+    pageUrlField: "c_pageURL",
   },
 };
 
