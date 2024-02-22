@@ -40,8 +40,8 @@ export const config: TemplateConfig = {
     localization: {
       locales: ["en"],
     },
-    pageUrlField: "c_pageURL",
   },
+  pageUrlField: "c_pageURL",
 };
 
 export const getPath: GetPath<TemplateProps> = ({ document }) => {
