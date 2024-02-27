@@ -1,2 +1,2 @@
 serving:
-  reverseProxyPrefix: http://test.rplocal.yextengtest.com:443/
+  reverseProxyPrefix: test.rplocal.yextengtest.com:443
