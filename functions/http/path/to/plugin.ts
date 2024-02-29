@@ -1,11 +1,9 @@
 // served at /path/to/plugin
 
-function main() {
+export default () => {
     return {
         headers: {},
         body: "Plugin Invoked Successfully",
         statusCode: 200
     };
 };
-
-export default main;
