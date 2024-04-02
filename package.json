@@ -8,22 +8,22 @@
   "scripts": {
     "dev": "pages dev",
     "prod": "pages prod",
-    "build:local": "pages build",
     "studio": "npm run features && npm run localData && studio",
     "features": "pages generate features",
     "localData": "yext pages generate-test-data",
     "fmt": "prettier -w .",
     "lint": "eslint .",
     "clean": "rm -rf .artifact-output .yext/ dist/ localData sites-rendered-output",
-    "generate-notices": "generate-license-file --input package.json --output ./THIRD-PARTY-NOTICES --overwrite"
+    "generate-notices": "generate-license-file --input package.json --output ./THIRD-PARTY-NOTICES --overwrite",
+    "build": "pages build"
   },
   "engines": {
-    "node": "18"
+    "node": "^18.0.0 || >=20.2.0"
   },
   "dependencies": {
     "@headlessui/react": "^1.7.15",
     "@heroicons/react": "^2.0.18",
-    "@vitejs/plugin-react": "^4.0.2",
+    "@vitejs/plugin-react": "^4.2.1",
     "@yext/studio": "^0.25.0",
     "clsx": "^1.2.1",
     "cva": "npm:class-variance-authority@^0.7.0",
@@ -31,7 +31,7 @@
     "react-dom": "^18.0.2",
     "react-markdown": "^8.0.7",
     "tailwind-merge": "^1.13.2",
-    "vite": "^4.4.0"
+    "vite": "^5.2.7"
   },
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.10",
@@ -39,7 +39,7 @@
     "@types/react-dom": "^18.0.20",
     "@typescript-eslint/eslint-plugin": "^5.61.0",
     "@typescript-eslint/parser": "^5.61.0",
-    "@yext/pages": "1.0.0-rc.4",
+    "@yext/pages": "^1.1.0-beta.1",
     "autoprefixer": "^10.4.14",
     "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-react": "^7.32.2",
