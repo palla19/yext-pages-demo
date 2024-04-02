@@ -34,6 +34,7 @@ export const config: TemplateConfig = {
       "blogStarter_description",
       "blogStarter_metaDescription",
       "blogStarter_keywords",
+      "c_authScopeField",
     ],
     filter: {
       entityTypes: ["blogStarter_blog"],
@@ -42,7 +43,6 @@ export const config: TemplateConfig = {
       locales: ["en"],
     },
   },
-  pageUrlField: "c_pageURL",
 };
 
 export const getPath: GetPath<TemplateProps> = ({ document }) => {
