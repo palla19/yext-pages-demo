@@ -1,6 +1,7 @@
 import "../index.css";
 import {
   GetPath,
+  GetAuthScope,
   TemplateProps,
   TemplateConfig,
   TemplateRenderProps,
@@ -47,6 +48,11 @@ export const config: TemplateConfig = {
 export const getPath: GetPath<TemplateProps> = ({ document }) => {
   return document.slug ?? document.entityId.toString();
 };
+
+export const getAuthScope: GetAuthScope<TemplateProps> = ({ document }) => {
+  return document.c_authScopeField;
+};
+
 
 export const getHeadConfig: GetHeadConfig<
   TemplateRenderProps<{ name: string }>
