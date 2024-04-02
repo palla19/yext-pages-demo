@@ -2,6 +2,7 @@ import {
   GetHeadConfig,
   GetPath,
   HeadConfig,
+  Template,
   TemplateConfig,
   TemplateProps,
   TemplateRenderProps,
@@ -36,7 +37,7 @@ export const getHeadConfig: GetHeadConfig<
   };
 };
 
-export default function Home({ document }: TemplateProps) {
+const Home: Template<TemplateRenderProps> = ({ document }) => {
   return (
     <PageWrapper backgroundColor="White">
       <Header logo="http://a.mktgcdn.com/p/86Moa_TLbLDstVl9pCx-CZwrroZevu43XtPiCZVCG3U/300x300.png" />
@@ -71,4 +72,6 @@ export default function Home({ document }: TemplateProps) {
       <Footer />
     </PageWrapper>
   );
-}
+};
+
+export default Home;

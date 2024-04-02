@@ -2,6 +2,7 @@ import "../index.css";
 import {
   GetPath,
   GetAuthScope,
+  Template,
   TemplateProps,
   TemplateConfig,
   TemplateRenderProps,
@@ -62,7 +63,8 @@ export const getHeadConfig: GetHeadConfig<
   };
 };
 
-export default function Blog({ document }: TemplateProps) {
+
+const Blog: Template<TemplateRenderProps> = ({ document }) => {
   return (
     <PageWrapper backgroundColor="White">
       <Header logo="http://a.mktgcdn.com/p/86Moa_TLbLDstVl9pCx-CZwrroZevu43XtPiCZVCG3U/300x300.png" />
@@ -111,4 +113,6 @@ export default function Blog({ document }: TemplateProps) {
       <Footer />
     </PageWrapper>
   );
-}
+};
+
+export default Blog;
