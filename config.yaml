@@ -9,3 +9,5 @@ buildConfiguration:
 livePreviewConfiguration:
   setupCommand: npm run features && npm run localData
   serveCommand: npm run studio
+authentication:
+  policyName: auth-policy
