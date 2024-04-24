@@ -1,7 +1,8 @@
 import "../index.css";
 import {
   GetPath,
-  GetAuthScope,
+  GetSources,
+  GetDestination,
   Template,
   TemplateProps,
   TemplateConfig,
@@ -35,7 +36,6 @@ export const config: TemplateConfig = {
       "blogStarter_description",
       "blogStarter_metaDescription",
       "blogStarter_keywords",
-      "c_authScopeField",
     ],
     filter: {
       entityTypes: ["blogStarter_blog"],
@@ -50,11 +50,6 @@ export const getPath: GetPath<TemplateProps> = ({ document }) => {
   return document.slug ?? document.entityId.toString();
 };
 
-export const getAuthScope: GetAuthScope<TemplateProps> = ({ document }) => {
-  return document.c_authScopeField;
-};
-
-
 export const getHeadConfig: GetHeadConfig<
   TemplateRenderProps<{ name: string }>
 > = ({ document }): HeadConfig => {
@@ -62,6 +57,27 @@ export const getHeadConfig: GetHeadConfig<
     title: document.name,
   };
 };
+
+/**
+ * Defines the URL to redirect the source paths to.
+ */
+export const getDestination: GetDestination<TemplateProps> = ({ document }) => {
+  return `${document.slug}`;
+};
+
+
+/**
+ * Defines a list of redirect source objects, which will redirect to the URL created by getDestination.
+ */
+export const getSources: GetSources<TemplateProps> = ({ document }) => {
+  return [
+     {
+        "source": `alternate-source-${document.id}`,
+        "status": 301
+     },
+ ];
+};
+
 
 
 const Blog: Template<TemplateRenderProps> = ({ document }) => {
