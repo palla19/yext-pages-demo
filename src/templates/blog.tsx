@@ -72,7 +72,7 @@ export const getDestination: GetDestination<TemplateProps> = ({ document }) => {
 export const getSources: GetSources<TemplateProps> = ({ document }) => {
   return [
      {
-        "source": `alternate-source-${document.id}`,
+        "source": `alternate-source-${document.entityId}`,
         "status": 301
      },
  ];
